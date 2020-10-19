@@ -1,0 +1,139 @@
+{
+    "result.html": [
+        {
+            "operation": "DELETE",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:54:58",
+            "keyStrokeInfo": "",
+            "position": "126,58"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:54:59",
+            "keyStrokeInfo": "P",
+            "position": "126,58"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:55:00",
+            "keyStrokeInfo": "r",
+            "position": "126,59"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:55:00",
+            "keyStrokeInfo": "i",
+            "position": "126,60"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:55:00",
+            "keyStrokeInfo": "y",
+            "position": "126,61"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:55:01",
+            "keyStrokeInfo": "a",
+            "position": "126,62"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:55:01",
+            "keyStrokeInfo": "n",
+            "position": "126,63"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:55:02",
+            "keyStrokeInfo": "k",
+            "position": "126,64"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:55:02",
+            "keyStrokeInfo": "a",
+            "position": "126,65"
+        },
+        {
+            "operation": "PASTE",
+            "lines": 1,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:55:25",
+            "keyStrokeInfo": "<!-- ",
+            "position": "125,18"
+        }
+    ],
+    "index.html": [
+        {
+            "operation": "DELETE",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:57:51",
+            "keyStrokeInfo": "",
+            "position": "158,55"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:57:52",
+            "keyStrokeInfo": "P",
+            "position": "158,55"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:57:52",
+            "keyStrokeInfo": "r",
+            "position": "158,56"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:57:52",
+            "keyStrokeInfo": "i",
+            "position": "158,57"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:57:53",
+            "keyStrokeInfo": "y",
+            "position": "158,58"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:57:53",
+            "keyStrokeInfo": "a",
+            "position": "158,59"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:57:53",
+            "keyStrokeInfo": "n",
+            "position": "158,60"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:57:53",
+            "keyStrokeInfo": "k",
+            "position": "158,61"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:57:53",
+            "keyStrokeInfo": "a",
+            "position": "158,62"
+        }
+    ]
+}

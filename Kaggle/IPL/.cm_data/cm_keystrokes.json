@@ -1,0 +1,151 @@
+{
+    "app.py": [
+        {
+            "operation": "PASTE",
+            "lines": 76,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:08:50",
+            "keyStrokeInfo": "# Importing essential libraries\r\nfrom flask import Flask, render_template, request\r\nimport pickle\r\nimport numpy as np\r\n\r\n# Load the Random Forest CLassifier model\r\nfilename = 'first-innings-score-lr-model.pkl'\r\nregressor = pickle.load(open(filename, 'rb'))\r\n\r\napp = Flask(__name__)\r\n\r\n@app.route('/')\r\ndef home():\r\n\treturn render_template('index.html')\r\n\r\n@app.route('/predict', methods=['POST'])\r\ndef predict():\r\n    temp_array = list()\r\n    \r\n    if request.method == 'POST':\r\n        \r\n        batting_team = request.form['batting-team']\r\n        if batting_team == 'Chennai Super Kings':\r\n            temp_array = temp_array + [1,0,0,0,0,0,0,0]\r\n        elif batting_team == 'Delhi Daredevils':\r\n            temp_array = temp_array + [0,1,0,0,0,0,0,0]\r\n        elif batting_team == 'Kings XI Punjab':\r\n            temp_array = temp_array + [0,0,1,0,0,0,0,0]\r\n        elif batting_team == 'Kolkata Knight Riders':\r\n            temp_array = temp_array + [0,0,0,1,0,0,0,0]\r\n        elif batting_team == 'Mumbai Indians':\r\n            temp_array = temp_array + [0,0,0,0,1,0,0,0]\r\n        elif batting_team == 'Rajasthan Royals':\r\n            temp_array = temp_array + [0,0,0,0,0,1,0,0]\r\n        elif batting_team == 'Royal Challengers Bangalore':\r\n            temp_array = temp_array + [0,0,0,0,0,0,1,0]\r\n        elif batting_team == 'Sunrisers Hyderabad':\r\n            temp_array = temp_array + [0,0,0,0,0,0,0,1]\r\n            \r\n            \r\n        bowling_team = request.form['bowling-team']\r\n        if bowling_team == 'Chennai Super Kings':\r\n            temp_array = temp_array + [1,0,0,0,0,0,0,0]\r\n        elif bowling_team == 'Delhi Daredevils':\r\n            temp_array = temp_array + [0,1,0,0,0,0,0,0]\r\n        elif bowling_team == 'Kings XI Punjab':\r\n            temp_array = temp_array + [0,0,1,0,0,0,0,0]\r\n        elif bowling_team == 'Kolkata Knight Riders':\r\n            temp_array = temp_array + [0,0,0,1,0,0,0,0]\r\n        elif bowling_team == 'Mumbai Indians':\r\n            temp_array = temp_array + [0,0,0,0,1,0,0,0]\r\n        elif bowling_team == 'Rajasthan Royals':\r\n            temp_array = temp_array + [0,0,0,0,0,1,0,0]\r\n        elif bowling_team == 'Royal Challengers Bangalore':\r\n            temp_array = temp_array + [0,0,0,0,0,0,1,0]\r\n        elif bowling_team == 'Sunrisers Hyderabad':\r\n            temp_array = temp_array + [0,0,0,0,0,0,0,1]\r\n            \r\n            \r\n        overs = float(request.form['overs'])\r\n        runs = int(request.form['runs'])\r\n        wickets = int(request.form['wickets'])\r\n        runs_in_prev_5 = int(request.form['runs_in_prev_5'])\r\n        wickets_in_prev_5 = int(request.form['wickets_in_prev_5'])\r\n        \r\n        temp_array = temp_array + [overs, runs, wickets, runs_in_prev_5, wickets_in_prev_5]\r\n        \r\n        data = np.array([temp_array])\r\n        my_prediction = int(regressor.predict(data)[0])\r\n              \r\n        return render_template('result.html', lower_limit = my_prediction-10, upper_limit = my_prediction+5)\r\n\r\n\r\n\r\nif __name__ == '__main__':\r\n\tapp.run(debug=True)\r\n",
+            "position": "1,1"
+        },
+        {
+            "operation": "PASTE",
+            "lines": 1,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:09:03",
+            "keyStrokeInfo": "",
+            "position": "76,1"
+        },
+        {
+            "operation": "PASTE",
+            "lines": 1,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:09:13",
+            "keyStrokeInfo": "",
+            "position": "71,1"
+        },
+        {
+            "operation": "DELETE",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:09:14",
+            "keyStrokeInfo": "",
+            "position": "24,1"
+        },
+        {
+            "operation": "PASTE",
+            "lines": 1,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:09:18",
+            "keyStrokeInfo": "    ",
+            "position": "70,1"
+        },
+        {
+            "operation": "PASTE",
+            "lines": 1,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:09:21",
+            "keyStrokeInfo": "    ",
+            "position": "71,1"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:09:36",
+            "keyStrokeInfo": "    ",
+            "position": "14,1"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:09:38",
+            "keyStrokeInfo": "    ",
+            "position": "18,1"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:09:44",
+            "keyStrokeInfo": "    ",
+            "position": "76,1"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:24:11",
+            "keyStrokeInfo": "    ",
+            "position": "71,5"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:24:20",
+            "keyStrokeInfo": "    ",
+            "position": "71,1"
+        },
+        {
+            "operation": "DELETE",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:24:32",
+            "keyStrokeInfo": "",
+            "position": "71,1"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:24:49",
+            "keyStrokeInfo": "    ",
+            "position": "74,1"
+        },
+        {
+            "operation": "DELETE",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:24:51",
+            "keyStrokeInfo": "    ",
+            "position": "71,1"
+        },
+        {
+            "operation": "PASTE",
+            "lines": 1,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:24:55",
+            "keyStrokeInfo": "        ",
+            "position": "71,1"
+        },
+        {
+            "operation": "PASTE",
+            "lines": 1,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:25:07",
+            "keyStrokeInfo": "    ",
+            "position": "71,1"
+        },
+        {
+            "operation": "TYPED",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:25:15",
+            "keyStrokeInfo": "\r\n    ",
+            "position": "71,105"
+        },
+        {
+            "operation": "DELETE",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:25:16",
+            "keyStrokeInfo": "",
+            "position": "72,1"
+        },
+        {
+            "operation": "DELETE",
+            "lines": 0,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:25:17",
+            "keyStrokeInfo": "",
+            "position": "73,1"
+        },
+        {
+            "operation": "DELETE",
+            "lines": 1,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:25:17",
+            "keyStrokeInfo": "",
+            "position": "72,1"
+        },
+        {
+            "operation": "PASTE",
+            "lines": 76,
+            "keyStrokeTimeStamp": "Wed Oct 07 2020 16:27:08",
+            "keyStrokeInfo": "# Importing essential libraries\r\nfrom flask import Flask, render_template, request\r\nimport pickle\r\nimport numpy as np\r\n\r\n# Load the Random Forest CLassifier model\r\nfilename = 'first-innings-score-lr-model.pkl'\r\nregressor = pickle.load(open(filename, 'rb'))\r\n\r\napp = Flask(__name__)\r\n\r\n@app.route('/')\r\ndef home():\r\n\treturn render_template('index.html')\r\n\r\n@app.route('/predict', methods=['POST'])\r\ndef predict():\r\n    temp_array = list()\r\n    \r\n    if request.method == 'POST':\r\n        \r\n        batting_team = request.form['batting-team']\r\n        if batting_team == 'Chennai Super Kings':\r\n            temp_array = temp_array + [1,0,0,0,0,0,0,0]\r\n        elif batting_team == 'Delhi Daredevils':\r\n            temp_array = temp_array + [0,1,0,0,0,0,0,0]\r\n        elif batting_team == 'Kings XI Punjab':\r\n            temp_array = temp_array + [0,0,1,0,0,0,0,0]\r\n        elif batting_team == 'Kolkata Knight Riders':\r\n            temp_array = temp_array + [0,0,0,1,0,0,0,0]\r\n        elif batting_team == 'Mumbai Indians':\r\n            temp_array = temp_array + [0,0,0,0,1,0,0,0]\r\n        elif batting_team == 'Rajasthan Royals':\r\n            temp_array = temp_array + [0,0,0,0,0,1,0,0]\r\n        elif batting_team == 'Royal Challengers Bangalore':\r\n            temp_array = temp_array + [0,0,0,0,0,0,1,0]\r\n        elif batting_team == 'Sunrisers Hyderabad':\r\n            temp_array = temp_array + [0,0,0,0,0,0,0,1]\r\n            \r\n            \r\n        bowling_team = request.form['bowling-team']\r\n        if bowling_team == 'Chennai Super Kings':\r\n            temp_array = temp_array + [1,0,0,0,0,0,0,0]\r\n        elif bowling_team == 'Delhi Daredevils':\r\n            temp_array = temp_array + [0,1,0,0,0,0,0,0]\r\n        elif bowling_team == 'Kings XI Punjab':\r\n            temp_array = temp_array + [0,0,1,0,0,0,0,0]\r\n        elif bowling_team == 'Kolkata Knight Riders':\r\n            temp_array = temp_array + [0,0,0,1,0,0,0,0]\r\n        elif bowling_team == 'Mumbai Indians':\r\n            temp_array = temp_array + [0,0,0,0,1,0,0,0]\r\n        elif bowling_team == 'Rajasthan Royals':\r\n            temp_array = temp_array + [0,0,0,0,0,1,0,0]\r\n        elif bowling_team == 'Royal Challengers Bangalore':\r\n            temp_array = temp_array + [0,0,0,0,0,0,1,0]\r\n        elif bowling_team == 'Sunrisers Hyderabad':\r\n            temp_array = temp_array + [0,0,0,0,0,0,0,1]\r\n            \r\n            \r\n        overs = float(request.form['overs'])\r\n        runs = int(request.form['runs'])\r\n        wickets = int(request.form['wickets'])\r\n        runs_in_prev_5 = int(request.form['runs_in_prev_5'])\r\n        wickets_in_prev_5 = int(request.form['wickets_in_prev_5'])\r\n        \r\n        temp_array = temp_array + [overs, runs, wickets, runs_in_prev_5, wickets_in_prev_5]\r\n        \r\n        data = np.array([temp_array])\r\n        my_prediction = int(regressor.predict(data)[0])\r\n              \r\n        return render_template('result.html', lower_limit = my_prediction-10, upper_limit = my_prediction+5)\r\n\r\n\r\n\r\nif __name__ == '__main__':\r\n\tapp.run(debug=True)",
+            "position": "1,1"
+        }
+    ]
+}
